@@ -11,7 +11,7 @@ angular.module('starter', ['ionic'])
       StatusBar.styleDefault();
     }
     // Set FullScreen
-    ionic.Platform.showFullScreen(true);
+    ionic.Platform.showFullScreen = true;
   });
 })
 
@@ -56,7 +56,7 @@ angular.module('starter', ['ionic'])
         $interval(function(){
             $scope.myMood = $scope.colors[$scope.getRandomSpan()];
             $log.info($scope.myMood.title);
-        }, 30000);
+        }, 1000);
     }
 
     // set mood
@@ -65,7 +65,6 @@ angular.module('starter', ['ionic'])
             $scope.myMood = $scope.colors[mood];
             $log.info('Diego changed his mood to', $scope.colors[mood].title);
         }, 1000);
-        $scope.diego();
     }
 
 });

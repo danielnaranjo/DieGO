@@ -38,7 +38,7 @@
 
     <body ng-app="starter" has-header="false" hide-nav-bar="true" enable-menu-with-back-views="false">
 
-        <ion-content ng-controller="UniqueCtrl" style="background-color:{{myMood.color}}" class="padding" on-hold="mood(0)" on-swipe-down="mood(1)" on-swipe-up="mood(3)" on-tap="mood(4)" on-double-tap="mood(2)">
+        <ion-content ng-controller="UniqueCtrl" style="background-color:{{myMood.color}}" class="padding" on-hold="mood(0)" on-drag="mood(1)" on-swipe-down="mood(2)" on-swipe-up="mood(3)" on-tap="mood(4)" on-double-tap="diego()">
             <div>
                 <h1>
                     {{myMood.face}}
