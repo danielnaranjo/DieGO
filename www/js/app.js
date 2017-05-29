@@ -22,3 +22,57 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.controller('UniqueCtrl', function ($scope, $log, $timeout, $interval){
+
+    // color, emoticon and title
+    $scope.colors = [
+        {
+            color: '#fcdc05',
+            face: ':-)',
+            title: 'Happy'
+        },{
+            color: '#ff0000',
+            face: ':-S',
+            title: 'Mad'
+        },{
+            color: '#0000ff',
+            face: ':-(',
+            title: 'Sad'
+        },{
+            color: '#00ff00',
+            face: ':-/',
+            title: 'Disgust'
+        },{
+            color: '#8000ff',
+            face: ':-O',
+            title: 'Worry'
+        }
+    ];
+
+    // random number
+    $scope.getRandomSpan = function(){
+        return Math.floor((Math.random()*4));
+    }
+
+    // color by default
+    $scope.myMood = $scope.colors[0];
+
+    // magic
+    $scope.diego = function(){
+        $log.info('Diego is actived');
+        $interval(function(){
+            $scope.myMood = $scope.colors[$scope.getRandomSpan()];
+            $log.info($scope.myMood.title);
+        }, 30000);
+    }
+
+    // set mood
+    $scope.mood = function(mood){
+        $timeout(function(){
+            $scope.myMood = $scope.colors[mood];
+            $log.info('Diego chandeg his mood to', $scope.colors[mood].title);
+        }, 3000);
+    }
+
+});

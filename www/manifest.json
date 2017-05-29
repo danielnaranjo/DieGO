@@ -1,6 +1,6 @@
 {
-  "name": "My Ionic App",
-  "short_name": "My Ionic App",
+  "name": "DieGO",
+  "short_name": "Tab to change color and faces",
   "start_url": "index.html",
   "display": "standalone",
   "icons": [{

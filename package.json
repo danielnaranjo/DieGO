@@ -1,7 +1,7 @@
 {
   "name": "diego",
   "version": "1.1.1",
-  "description": "DieGO: An Ionic project",
+  "description": "DieGO: Tab to change color and faces",
   "dependencies": {
     "cordova-plugin-console": "^1.0.5",
     "cordova-plugin-device": "^1.1.4",

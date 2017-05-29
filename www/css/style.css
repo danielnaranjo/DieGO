@@ -1,1 +1,21 @@
 /* Empty. Add your own CSS if you like */
+div {
+    /*height: 100%;
+    margin:
+    padding: 300px auto;
+    text-align: center;*/
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+h1 {
+    color: #fff;
+    font-size: 10em;
+}
+p, span {
+    color: #fff;
+    font-size: 2em;
+}
