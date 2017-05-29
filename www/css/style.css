@@ -4,11 +4,12 @@ div {
     margin:
     padding: 300px auto;
     text-align: center;*/
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 h1 {

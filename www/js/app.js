@@ -7,19 +7,11 @@ angular.module('starter', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
-      cordova.plugins.Keyboard.disableScroll(true);
-    }
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+    // Set FullScreen
+    ionic.Platform.showFullScreen(true);
   });
 })
 
@@ -71,8 +63,9 @@ angular.module('starter', ['ionic'])
     $scope.mood = function(mood){
         $timeout(function(){
             $scope.myMood = $scope.colors[mood];
-            $log.info('Diego chandeg his mood to', $scope.colors[mood].title);
-        }, 3000);
+            $log.info('Diego changed his mood to', $scope.colors[mood].title);
+        }, 1000);
+        $scope.diego();
     }
 
 });
