@@ -44,7 +44,7 @@ angular.module('starter', ['ionic'])
             face: ':-/',
             title: 'Disgust'
         },{
-            color: '#8000ff',
+            color: '#660099',
             face: ':-O',
             title: 'Worry'
         }
